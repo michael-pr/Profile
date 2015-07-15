@@ -1,0 +1,25 @@
+<template name="home">
+  <div class="home-wrapper">
+
+      <div class="home-background"></div>
+      <div class="home-container">
+
+        <div class="link-wrapper">
+          <a href="{{ pathFor 'about' }}">About</a>
+          <a href="{{ pathFor 'resume' }}">Resume</a>
+          <a href="{{ pathFor 'blog' }}">Blog</a>
+          <a href="{{ pathFor 'contact' }}">Contact</a>
+        </div>
+        <div class="quote-wrapper">
+          <h1>{{quote.quote}}</h1>
+          <h4>- {{quote.author}}</h4>
+        </div>
+
+        <div class="home-footer">
+          <p>Copyright &copy; {{year}} Michael Price</p>
+        </div>
+
+      </div>
+
+  </div>
+</template>

@@ -1,0 +1,37 @@
+<template name="contact">
+  <div class="page">
+
+    <h1 class="page-title">Contact</h1>
+    <p style="padding-bottom: 20px;">
+      Please use this contact form to get in touch with me.
+    </p>
+    <div class="contact-form">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="contact-full-name" class="col-sm-2 control-label">Full Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="contact-full-name" placeholder="Full Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-email" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="contact-email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-message" class="col-sm-2 control-label">Message</label>
+          <div class="col-sm-10">
+            <textarea id="contact-message" class="form-control" rows="5" style="resize:vertical;max-height:300px;" placeholder="Message"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</template>

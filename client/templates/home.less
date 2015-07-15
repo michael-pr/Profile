@@ -1,0 +1,115 @@
+@import "globals";
+
+.home-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+
+  .home-background {
+    @blur-value: 5px;
+
+    position: absolute;
+    top: -(@blur-value * 2);
+    left: -(@blur-value * 2);
+
+    min-height: 110%;
+    min-width: 110%;
+    z-index: -10;
+
+    background: @photo-url no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-filter: blur(@blur-value);
+    -moz-filter: blur(@blur-value);
+    -o-filter: blur(@blur-value);
+    -ms-filter: blur(@blur-value);
+    filter: blur(@blur-value);
+
+
+    transition: filter 1s;
+    -webkit-transition: filter 1s;
+    transition: -webkit-filter 1s;
+    -webkit-transition: -webkit-filter 1s;
+
+    transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+
+    &.active {
+      @blur-value: 0px;
+
+      -webkit-filter: blur(@blur-value) !important;
+      -moz-filter: blur(@blur-value) !important;
+      -o-filter: blur(@blur-value) !important;
+      -ms-filter: blur(@blur-value) !important;
+      filter: blur(@blur-value) !important;
+    }
+  }
+
+  .home-container {
+    display: table-cell;
+    vertical-align: middle;
+
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.35);
+
+    .quote-wrapper {
+      padding: 0 20%;
+      max-height: 180px;
+
+      h1 {
+        font-style: italic;
+        font-size: 3em;
+        font-weight: 100;
+
+        //font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+      h4 {
+        font-size: 1.5em;
+        font-weight: 400;
+        text-align: right;
+        padding: 10px 60px 0 0;
+      }
+
+    }
+
+    .link-wrapper {
+      position: absolute;
+      top: 4%;
+      width: 100%;
+
+      margin: 20px auto;
+
+      a {
+        padding: 20px;
+        text-decoration: none;
+        font-size: 1.5em;
+        color: #333;
+
+        &:hover {
+          //font-weight: bold;
+          text-shadow: 1px 1px darken(#333, 20%);
+        }
+      }
+    }
+
+    .home-footer {
+      position: absolute;
+      bottom: 10px;
+      min-width: 100%;
+
+      p {
+        font-size: 1em;
+        color: #333;
+      }
+
+    }
+
+  }
+
+
+}
