@@ -25,10 +25,6 @@ if (Quotes.find().count() === 0) {
       author: "Abraham Lincoln"
     },
     {
-      quote: '"And in the end it is not the years in your life that count, it\'s the life in your years."',
-      author: "Abraham Lincoln"
-    },
-    {
       quote: '"Whatever you are, be a good one."',
       author: "Abraham Lincoln"
     },

@@ -1,6 +1,11 @@
 @import "globals";
 
 .home-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
   display: table;
   width: 100%;
   height: 100%;
@@ -58,17 +63,23 @@
     background-color: rgba(255, 255, 255, 0.35);
 
     .quote-wrapper {
-      padding: 0 20%;
-      max-height: 180px;
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      padding: 0 12%;
+      //max-height: 180px;
+
+      font-family: "Libre Baskerville", serif;
+      color: lighten(#000, 20%);
 
       h1 {
         font-style: italic;
-        font-size: 3em;
+        font-size: 2.6em;
         font-weight: 100;
-
-        //font-family: "Comic Sans MS", cursive, sans-serif;
+        line-height: 1.4;
       }
-      h4 {
+      h4 { // TODO: This needs to move with the quote for larger views
         font-size: 1.5em;
         font-weight: 400;
         text-align: right;
@@ -78,21 +89,28 @@
     }
 
     .link-wrapper {
+      @media (max-width: 768px) {
+        height: 100%;
+      }
       position: absolute;
-      top: 4%;
+      top: 2%;
       width: 100%;
 
       margin: 20px auto;
+      font-family: "Roboto", sans-serif;
 
       a {
-        padding: 20px;
+        @media (max-width: 768px) {
+          display: block;
+          font-size: 2em;
+        }
+        padding: 30px;
         text-decoration: none;
         font-size: 1.5em;
-        color: #333;
+        color: lighten(#000, 30%);
 
         &:hover {
-          //font-weight: bold;
-          text-shadow: 1px 1px darken(#333, 20%);
+          color: lighten(#000, 10%);
         }
       }
     }
@@ -102,7 +120,13 @@
       bottom: 10px;
       min-width: 100%;
 
+      font-family: "Roboto", sans-serif;
+
       p {
+        @media (max-width: 768px) {
+          font-size: 0.75em;
+        }
+
         font-size: 1em;
         color: #333;
       }

@@ -1,14 +1,19 @@
 <template name="contentLayout">
 
+  {{#if quotesReady}}
+    {{> home}}
+  {{/if}}
+
   <div class="content-layout-wrapper row">
 
     <div class="side-menu-wrapper">
-      <div class="side-menu-background"></div>
+      <!--<div class="side-menu-background"></div>-->
       <div class="side-menu-links">
-        <div class="link"><a href="{{ pathFor 'about' }}" class="{{ isActive 'about' }}">About</a></div>
-        <div class="link"><a href="{{ pathFor 'resume' }}" class="{{ isActive 'resume' }}">Resume</a></div>
-        <div class="link"><a href="{{ pathFor 'blog' }}" class="{{ isActive 'blog' }}">Blog</a></div>
-        <div class="link"><a href="{{ pathFor 'contact' }}" class="{{ isActive 'contact' }}">Contact</a></div>
+        <div class="link {{ isActive 'about' }}"><a href="{{ pathFor 'about' }}">About</a></div>
+        <div class="link {{ isActive 'resume' }}"><a href="{{ pathFor 'resume' }}">Resume</a></div>
+        <!--<div class="link {{ isActive 'blog' }}"><a href="{{ pathFor 'blog' }}">Blog</a></div>-->
+        <div class="link {{ isActive 'apps' }}"><a href="{{ pathFor 'apps' }}">Apps</a></div>
+        <div class="link {{ isActive 'contact' }}"><a href="{{ pathFor 'contact' }}">Contact</a></div>
       </div>
 
       <div class="side-menu-footer">
@@ -17,6 +22,9 @@
     </div>
 
     <div class="side-content">
+      <div class="side-menu-mobile">
+        <i class="fa fa-bars"></i>
+      </div>
       {{> yield}}
     </div>
 

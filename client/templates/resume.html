@@ -1,5 +1,21 @@
 <template name="resume">
-  <div class="page resume-wrapper">
+  <div class="page">
+
+    <div class="resume-wrapper">
+      <div class="resume-container">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <canvas id="resumepdf"></canvas>
+            </div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--<div class="page resume-wrapper disable-scroll">
 
     {{#if showLoading}}
       {{> loading}}
@@ -7,5 +23,5 @@
 
     <iframe id="resume-frame" frameBorder="0" src="https://standardresume.co/MichaelPrice"></iframe>
 
-  </div>
+  </div>-->
 </template>

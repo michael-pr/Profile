@@ -3,9 +3,14 @@
 
 .content-layout-wrapper {
   height: 100%;
+  opacity: 0;
 }
 
 .side-menu-wrapper {
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   //box-shadow: 10px 10px 5px #888;
   //z-index: 10;
   height: 100%;
@@ -39,38 +44,39 @@
   }
 
   .side-menu-links {
+    @link-color: #333;
+
     min-height: 100%;
     text-align: left;
 
     padding: 40px 0;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.35);
-    //border-right: 18px solid #fff;
+    //background-color: rgba(255, 255, 255, 0.35);
+
+    font-family: "Roboto", sans-serif;
 
     .link {
       width: 100%;
       padding: 20px 0 20px 60px;
 
       a {
-        @link-color: #333;
-        //text-shadow: 2px 2px #666;
-
-        font-weight: 100;
+        font-weight: 300;
         text-decoration: none;
         font-size: 2em;
         color: @link-color;
         padding: 20px 0;
 
         &:hover {
-          //font-size: 2.2em;
-          font-weight: bold;
-          color: darken(@link-color, 20%);
+          font-weight: 500;
+          color: lighten(@link-color, 4%);
         }
       }
 
       &.active {
+        //box-shadow: 22px 0 0 0 lighten(@link-color, 40%) inset;
         a {
-            color: #fff;
+          font-weight: 500;
+          color: lighten(@link-color, 10%);
         }
       }
     }
@@ -91,14 +97,43 @@
 
 }
 
+.side-menu-mobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px 40px;
+
+    font-size: 2em;
+    z-index: 51;
+  }
+}
+
 .side-content {
-  box-shadow: -6px 4px 10px darken(#fff, 40%);;
+  @media (max-width: 768px) {
+    position: relative;
+    left: 0;
+    border: 0;
+    width: 100%;
+  }
+  height: 100%;
+  //overflow-y: scroll;
+  background-color: #fff;
+
+  .disable-scroll {
+    overflow: hidden !important;
+  }
+
+  //box-shadow: -6px 4px 10px darken(#fff, 40%);;
   position: absolute;
   left: 270px;
   z-index: 20;
-  border-left: 18px solid #fff;
+  //border-left: 18px solid #fff;
 
   height: 100%;
-  width: calc(~"100% - 275px");
+  width: calc(~"100% - 270px");
   margin: 0 auto;
 }
