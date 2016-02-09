@@ -5,10 +5,6 @@ if (Quotes.find().count() === 0) {
       author: "Dale Carnegie"
     },
     {
-      quote: '"A great man shows his greatness by the way he treats little men."',
-      author: "Thomas Carlyle"
-    },
-    {
       quote: '"Be kind, for everyone you meet is fighting a hard battle."',
       author: "Socrates"
     },
@@ -25,19 +21,11 @@ if (Quotes.find().count() === 0) {
       author: "Abraham Lincoln"
     },
     {
-      quote: '"Whatever you are, be a good one."',
-      author: "Abraham Lincoln"
-    },
-    {
       quote: '"Do what you can, with what you have, where you are."',
       author: "Theodore Roosevelt"
     },
     {
       quote: '"It is hard to fail, but it is worse never to have tried to succeed."',
-      author: "Theodore Roosevelt"
-    },
-    {
-      quote: '"Knowing what\'s right doesn\'t mean much unless you do what\'s right."',
       author: "Theodore Roosevelt"
     },
     {
@@ -63,10 +51,6 @@ if (Quotes.find().count() === 0) {
     {
       quote: '"Without music, life would be a mistake."',
       author: "Friedrich Nietzsche"
-    },
-    {
-      quote: '"Imperfection is beauty, madness is genius and it\'s better to be absolutely ridiculous than absolutely boring."',
-      author: "Marilyn Monroe"
     },
     {
       quote: '"I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."',
@@ -111,10 +95,6 @@ if (Quotes.find().count() === 0) {
     {
       quote: '"For every minute you are angry you lose sixty seconds of happiness."',
       author: "Ralph Waldo Emerson"
-    },
-    {
-      quote: '"Happiness is when what you think, what you say, and what you do are in harmony."',
-      author: "Mahatma Gandhi"
     },
     {
       quote: '"Count your age by friends, not years. Count your life by smiles, not tears."',

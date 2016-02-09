@@ -2,21 +2,31 @@
   h2 {
     font-family: "Roboto Light", sans-serif;
     font-size: 2.4em;
+    margin: 0 !important;
   }
 }
 
 .apps-description {
+  margin-top: 10px;
   font-size: 1em;
   opacity: 0.94;
 }
 
-.apps-container {
-  margin: 20px 40px 20px 40px;
+.apps-wrapper {
 
-  a {
-    text-decoration: none;
-    color: #000;
-  }
+}
+
+.apps-buffer {
+  margin: 20px 40px 80px 40px;
+  width: calc(~"100% - 80px");
+}
+
+.apps-container {
+  width: 100%;
+  height: 100vh;
+
+  //margin-top: -20px;
+  overflow: hidden;
 }
 
 .apps-item {
@@ -25,6 +35,12 @@
   h6 {
     font-size: 1.4em;
     color: #000;
+  }
+  a {
+    padding-top: 10px;
+    text-decoration: none !important;
+    width: 100%;
+    height: 60px;
   }
   p {
     font-size: 0.9em;
@@ -42,6 +58,22 @@
   opacity: 0.84 !important;
 }
 
+.app-item-tech {
+  color: #000;
+  font-style: oblique;
+
+  span {
+    font-style: normal;
+  }
+}
+
+.app-item-design {
+
+  h6 {
+    font-weight: 400;
+  }
+}
+
 .wp-item {
   width: 100%;
   height: 60px;
@@ -52,10 +84,31 @@
     padding-top: 10px;
   }
 
+  p {
+    color: #000;
+  }
+
   img {
     height: 60px;
     width: 60px;
     float: left;
     margin-right: 20px;
+  }
+}
+
+.design-pics {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.design-pics-container {
+  height: 100%;
+  width: 120%;
+  float: left;
+  margin-right: 10px;
+
+  .design-pic {
+    height: 400px;
   }
 }

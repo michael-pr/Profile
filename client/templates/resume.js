@@ -6,7 +6,7 @@ Template.resume.onRendered(function () {
   PDFJS.workerSrc = '/packages/pascoual_pdfjs/build/pdf.worker.js'
   PDFJS.getDocument(url).then(function (pdf) {
     pdf.getPage(1).then(function (page) {
-      var scale = 1;
+      var scale = 2;
       var viewport = page.getViewport(scale);
 
       var canvas = document.getElementById("resumepdf");

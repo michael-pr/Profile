@@ -1,5 +1,5 @@
 Template.apps.onRendered(function () {
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.apps-container', {
     scrollbar: '.swiper-scrollbar',
     direction: 'vertical',
     slidesPerView: 'auto',

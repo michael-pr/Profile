@@ -10,6 +10,8 @@ var numberOfQuotes;
 var quoteIndexes;
 var quoteChangerIntervalId;
 
+var backgroundLeft = "-25%";
+
 Template.home.onCreated(function () {
 
   numberOfQuotes = Quotes.find().count();
@@ -50,7 +52,7 @@ Template.home.helpers({
 
 Template.home.events({
   "click .home-wrapper": function (e) {
-    var target = $(e.target);
+    /*var target = $(e.target);
     if (target.hasClass("home-background")) {
         e.preventDefault();
 
@@ -61,7 +63,11 @@ Template.home.events({
           target.addClass("active");
           $(".quote-wrapper").animate({ "opacity": "0" }, 800);
         }
-    }
+    }*/
+    e.preventDefault();
+
+    changeQuote();
+    Session.set("changedQuote", true);
   },
   "click .quote-wrapper": function (e) {
     e.preventDefault();
@@ -107,7 +113,7 @@ HomeOverlay = {
     var homeWrapper = $(".home-wrapper");
     homeWrapper.css({
       "z-index": "-10",
-      "left": "-25%",
+      "left": backgroundLeft,
       "top": "0"
     });
     $(".quote-wrapper").add(".link-wrapper").add(".home-footer").css("opacity", "0");
@@ -154,7 +160,7 @@ HomeOverlay = {
     });
 
     homeWrapper.animate({
-      "left": "-25%"
+      "left": backgroundLeft
     }, {
       duration: 200,
       easing: "easeInOutExpo",
