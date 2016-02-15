@@ -13,7 +13,7 @@ Template.resume.onRendered(function () {
       var context = canvas.getContext("2d");
       canvas.height = viewport.height;
       canvas.width = viewport.width;
-      console.log(viewport.width);
+      //console.log(viewport.width);
 
       page.render({
         canvasContext: context,
@@ -24,8 +24,6 @@ Template.resume.onRendered(function () {
       });
     });
   });
-
-
 
   // Code for standard resume
   /*resumeLoaded.set(false);

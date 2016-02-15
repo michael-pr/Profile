@@ -1,4 +1,7 @@
 .apps-title {
+  width: 100%;
+  height: auto;
+  margin-top: 16%;
   h2 {
     font-family: "Roboto Light", sans-serif;
     font-size: 2.4em;
@@ -7,6 +10,8 @@
 }
 
 .apps-description {
+  width: 100%;
+  height: auto;
   margin-top: 10px;
   font-size: 1em;
   opacity: 0.94;
@@ -19,6 +24,7 @@
 .apps-buffer {
   margin: 20px 40px 80px 40px;
   width: calc(~"100% - 80px");
+  height: calc(~"100% - 100px");
 }
 
 .apps-container {
@@ -75,17 +81,22 @@
 }
 
 .wp-item {
-  width: 100%;
+  width: 46%;
   height: 60px;
+  float: left;
 
-  margin-top: 14px;
+  margin: 14px 2% 0 2%;
+  overflow: hidden;
 
-  a {
-    padding-top: 10px;
+  h6 {
+    font-size: 1em;
+    color: #000;
+    margin: 0 0 6px 0;
   }
 
   p {
     color: #000;
+    font-size: 0.7em;
   }
 
   img {
@@ -111,4 +122,180 @@
   .design-pic {
     height: 400px;
   }
+}
+
+.app-demo-wrapper {
+  //position: absolute;
+  //left: 0;
+  //top: 0;
+  //z-index: 12;
+  //float: right;
+
+  width: 100%;
+  height: 100%;
+}
+
+.app-demo-container {
+  //position: absolute;
+  //left: 50%;
+  //top: 0;
+  //z-index: 16;
+}
+
+.app-demo-background {
+  width: 100%;
+  height: 100%;
+  z-index: 14;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+.app-demo {
+  width: 100%;
+  height: 100%;
+  z-index: 22;
+}
+.device-screen {
+  z-index: 14 !important;
+}
+
+.device-wrapper {
+  //z-index: 20 !important;
+}
+
+.slide-content {
+  width: 40%;
+  float: left;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.slide-title {
+  float: none;
+  width: 100%;
+  height: auto;
+}
+.slide-description {
+  float: none;
+  width: 100%;
+  height: auto;
+}
+
+.app-info {
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin-right: 6%;
+  margin-left: 4%;
+  //margin-top: 20%;
+  padding-top: 15%;
+
+  display: block;
+
+  text-align: center;
+  vertical-align: middle;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.start-app {
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background-color: #fff;
+  z-index: 16;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  h5 {
+    font-size: 2em;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.apps-intro {
+  text-align: center;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.apps-intro-container {
+  width: 100%;
+  height: 100%;
+}
+
+.apps-toc {
+  width: 100%;
+  height: auto;
+
+  ul {
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      color: #007aff;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.westminster-webshot {
+  width: 800px;
+  height: 400px;
+  //z-index: -1;
+
+  @media (max-height: 760px) {
+    position: absolute;
+    bottom: 0;
+    left: calc(~"50% - 400px");
+  };
+  @media (min-height: 760px) {
+    margin-top: 40px;
+    margin-left: calc(~"50% - 80px");
+  };
+
 }
